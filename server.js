@@ -33,9 +33,6 @@ app.get("/test-db", (req, res) => {
 
 });
 
-const PORT = process.env.PORT || 5000;
-
-const db = require("./db");
 
 /* =========================
    TEAMS
@@ -114,6 +111,8 @@ app.get("/api/stats", (req, res) => {
     });
 });
 
+const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`UDL-League Server Running on port ${PORT}`);
 });
