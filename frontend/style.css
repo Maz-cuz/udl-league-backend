@@ -1,0 +1,475 @@
+Yep — paste this whole updated version into `style.css`. I cleaned duplicates, added missing styles for `admin.html`, `knockout.html`, `.page`, `.bracket`, `.round`, `.match`, and kept it working on mobile.
+
+```css
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  background: #111827;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #38bdf8;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 40px;
+}
+
+.page h1 {
+  text-align: center;
+  font-size: 42px;
+  color: #38bdf8;
+  margin-bottom: 35px;
+}
+
+.page h2 {
+  color: #38bdf8;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    linear-gradient(
+      rgba(15, 23, 42, 0.85),
+      rgba(15, 23, 42, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1400&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  border: none;
+  background: #38bdf8;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
+  padding: 80px 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #38bdf8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  display: block;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 8px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+  border: 1px solid #334155;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+  background: #243449;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #38bdf8;
+  font-size: 24px;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* =========================
+   LEAGUE TABLE
+========================= */
+
+.table-section {
+  padding: 80px 40px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: #1e293b;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+table th {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 15px;
+  text-align: left;
+}
+
+table td {
+  padding: 15px;
+  border-bottom: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: #273549;
+}
+
+/* =========================
+   KNOCKOUT
+========================= */
+
+.bracket {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+}
+
+.round {
+  flex: 1;
+  min-width: 240px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.round h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #38bdf8;
+  margin-bottom: 24px;
+}
+
+.match {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.match span {
+  color: #e2e8f0;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* =========================
+   ADMIN
+========================= */
+
+.admin-section {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+#teamForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+}
+
+#teamList {
+  display: grid;
+  gap: 14px;
+}
+
+.team-box {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 16px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.team-box:hover {
+  border-color: #38bdf8;
+}
+
+/* =========================
+   FORMS / BUTTONS
+========================= */
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #ffffff;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #38bdf8;
+}
+
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #111827;
+  padding: 25px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #1e293b;
+}
+
+footer p {
+  color: #94a3b8;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+  #teamForm {
+    grid-template-columns: 1fr;
+  }
+
+  .bracket {
+    flex-direction: column;
+  }
+
+  .round {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .features,
+  .table-section,
+  .page {
+    padding: 60px 20px;
+  }
+
+  .section-title,
+  .page h1 {
+    font-size: 32px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .card,
+  .admin-section,
+  .round {
+    padding: 22px;
+  }
+
+  .team-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+```

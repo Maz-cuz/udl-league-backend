@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knockout | UDL-League</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html" aria-label="UDL-League home">UDL-League</a>
+
+    <div class="nav-links">
+      <a href="index.html" data-page="Home">Home</a>
+      <a href="fixtures.html" data-page="Fixtures">Fixtures</a>
+      <a href="results.html" data-page="Results">Results</a>
+      <a href="table.html" data-page="Table">Table</a>
+      <a href="players.html" data-page="Players">Players</a>
+      <a href="teams.html" data-page="Teams">Teams</a>
+      <a href="stats.html" data-page="Stats">Stats</a>
+      <a href="admin.html" data-page="Admin">Admin</a>
+      <a href="knockout.html" data-page="Knockout">Knockout</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1>UDL-League Knockout</h1>
+
+    <section class="bracket" aria-label="Knockout bracket">
+      <div class="round">
+        <h2>Quarter Finals</h2>
+
+        <div class="match">
+          <span id="qf1">Team 3 vs Team 6</span>
+          <button type="button" onclick="setWinner('qf1')">Winner</button>
+        </div>
+
+        <div class="match">
+          <span id="qf2">Team 4 vs Team 5</span>
+          <button type="button" onclick="setWinner('qf2')">Winner</button>
+        </div>
+      </div>
+
+      <div class="round">
+        <h2>Semi Finals</h2>
+
+        <div class="match">
+          <span id="sf1">Team 1 vs QF Winner</span>
+          <button type="button" onclick="setWinner('sf1')">Winner</button>
+        </div>
+
+        <div class="match">
+          <span id="sf2">Team 2 vs QF Winner</span>
+          <button type="button" onclick="setWinner('sf2')">Winner</button>
+        </div>
+      </div>
+
+      <div class="round">
+        <h2>Final</h2>
+
+        <div class="match">
+          <span id="final">SF Winner vs SF Winner</span>
+          <button type="button" onclick="setWinner('final')">Winner</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 UDL-League | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

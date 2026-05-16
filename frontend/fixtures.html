@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fixtures</title>
+<style>
+body{font-family:Arial;background:#0f172a;color:white;margin:0}
+header{background:#111827;padding:15px}
+a{color:white;margin:10px;text-decoration:none}
+a:hover{color:#38bdf8}
+.container{padding:20px}
+.item{background:#1f2937;padding:10px;margin:10px;border-radius:8px}
+</style>
+</head>
+<body>
+
+<header>
+<a href="index.html">Home</a>
+<a href="fixtures.html">Fixtures</a>
+<a href="results.html">Results</a>
+<a href="table.html">Table</a>
+<a href="players.html">Players</a>
+<a href="teams.html">Teams</a>
+<a href="stats.html">Stats</a>
+</header>
+
+<div class="container" id="fixtures"></div>
+
+<script>
+async function load(){
+const res = await fetch("http://localhost:5000/api/fixtures");
+const data = await res.json();
+
+document.getElementById("fixtures").innerHTML =
+data.map(f=>`<div class="item">${f.home_team} vs ${f.away_team} - ${f.match_date}</div>`).join("");
+}
+load();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | UDL-League</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html" aria-label="UDL-League home">UDL-League</a>
+
+    <div class="nav-links">
+      <a href="index.html" data-page="Home">Home</a>
+      <a href="fixtures.html" data-page="Fixtures">Fixtures</a>
+      <a href="results.html" data-page="Results">Results</a>
+      <a href="table.html" data-page="Table">Table</a>
+      <a href="players.html" data-page="Players">Players</a>
+      <a href="teams.html" data-page="Teams">Teams</a>
+      <a href="stats.html" data-page="Stats">Stats</a>
+      <a href="admin.html" data-page="Admin">Admin</a>
+      <a href="knockout.html" data-page="Knockout">Knockout</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1>Admin Panel</h1>
+
+    <section class="admin-section">
+      <h2>Add Team</h2>
+
+      <form id="teamForm">
+        <input name="team_name" placeholder="Team Name" required>
+        <input name="coach_name" placeholder="Coach" required>
+        <input name="contact" placeholder="Contact" required>
+        <button type="submit">Add Team</button>
+      </form>
+    </section>
+
+    <section class="admin-section">
+      <h2>Teams</h2>
+      <div id="teamList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 UDL-League | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
