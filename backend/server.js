@@ -12,7 +12,7 @@ app.use(express.json());
 // TEST DB CONNECTION
 console.log("MYSQL_URL:", process.env.MYSQL_URL);
 
-// Test database connection on startup
+// Test database connection
 async function testDatabase() {
     try {
         const [result] = await db.query("SELECT 1");

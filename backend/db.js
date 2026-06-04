@@ -9,7 +9,7 @@ pool.getConnection((err, connection) => {
         console.error("❌ DB Error:", err.message);
     } else {
         console.log("✅ Connected to Railway MySQL");
-        connection.release();
+        connection.release(); // Release back to pool
     }
 });
 

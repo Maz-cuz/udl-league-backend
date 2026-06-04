@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "UDL-League backend server",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "start": "node server.js"
   },
@@ -19,8 +18,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
