@@ -5,8 +5,12 @@
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
+<<<<<<< HEAD
     "start": "node server.js",
     "dev": "node server.js"
+=======
+    "start": "node server.js"
+>>>>>>> 54df0bc07fe9a2daa947daa806be3bc681a651cf
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -18,10 +22,19 @@
     "mysql2": "^3.11.5",
     "pdfkit": "^0.15.1"
   },
+<<<<<<< HEAD
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.14"
   }
+=======
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+>>>>>>> 54df0bc07fe9a2daa947daa806be3bc681a651cf
 }

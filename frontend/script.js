@@ -1,4 +1,4 @@
-Here is the full updated `script.js` code to paste. Main fix: admin protection now only runs on `admin.html`, so your public pages will not redirect everyone back to home.
+
 
 ```js
 /* =========================
